@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess with GPT</title>
+    
+    <!-- Correct Chessboard.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+    
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='frontend.css') }}">
+</head>
+<body>
+    <h1>Play Chess with GPT</h1>
+
+    <!-- Chessboard container -->
+    <div id="board" style="width: 400px;"></div>
+
+    <!-- Button to reset the game -->
+    <button id="reset">Reset Game</button>
+
+    <!-- Text box for inputting the desired rating -->
+    <div>
+        <label for="rating">Enter AI Rating (e.g., 800, 1200, 2000):</label>
+        <input type="text" id="rating" placeholder="e.g., 1200">
+    </div>
+
+    <!-- Display game status -->
+    <div id="status"></div>
+
+    <!-- Correct Chess.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    
+    <!-- Correct Chessboard.js library -->
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+
+    <!-- Your custom JavaScript file -->
+    <script src="{{ url_for('static', filename='frontend.js') }}"></script>
+</body>
+</html>
